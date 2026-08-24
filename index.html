@@ -1,154 +1,305 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title></title>
-	
-	<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Your Name | CV</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    .cv {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 50px 60px;
+      background: white;
+    }
+
+    /* Header */
+
+    header {
+      margin-bottom: 35px;
+      border-bottom: 2px solid #222;
+      padding-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 0 0 10px;
+      color: #555;
+      font-size: 18px;
+    }
+
+    .contact {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin: 0 0 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ccc;
+
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Entries */
+
+    .entry {
+      margin-bottom: 20px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .entry-title {
+      font-weight: bold;
+    }
+
+    .entry-date {
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .entry-subtitle {
+      margin-top: 2px;
+      color: #555;
+      font-style: italic;
+    }
+
+    .entry p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Skills */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill {
+      padding: 5px 10px;
+      background: #eee;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    /* Printing */
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .cv {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: black;
+      }
+    }
+  </style>
 </head>
+
 <body>
-	<div class="container">
-	<header>
-		<h1 id="name">Your Name</h1>
-		
-		<div id="designation">
-		
-			<span class="title">your designation</span>
-			<span class="organization">The organisation name</span>
-		
-		</div>
-		
-		<div class="contact">
-			<div class="email">john@example.com</div>
-		</div>
-		
-	</header>
-	
-	<div class="content" role=main>
-	
-		<section id="objective">
-			<h2 class="title">Objective</h2>
-			<div class="description">
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-				</p>			
-			</div> <!-- end description -->
-		</section>
-		
-		
-		<section id="Education">
-			<h2 class="title">Education</h2>
-			<div class="description">
-				
-				<table>
-					<thead>
-						<td>Duration</td>
-						<td>Qualification</td>
-						<td>Institute/School</td>
-						<td>Result</td>
-					</thead>
-					
-					<!-- edit this/ row-wise-->
-					<tr>
-						<td>abc</td>
-						<td>abc</td>
-						<td>abc</td>
-						<td>abc</td>
-					</tr>
-					
-					<tr> <!-- row2 -->
-						<td>abc</td>
-						<td>abc</td>
-						<td>abc</td>
-						<td>abc</td>
-					</tr>					
-					
-				</table>
-			
-			
-			</div> <!-- end description -->
-		</section>
-			
-		<section id="projects">
-			<h2 class="title">Projects Undertaken</h2>
-			<div class="description">
-				
-				<!-- Project 1 -->
-				<section class="project">
-					<h3 class="title">Title of the project</h3>
-					<div class="meta">
-						<span class="field">Project Field</span> <span class="date">Aug 2010 - Nov2010</span>
-					</div>
-					<p class="description"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-				</section> <!-- end project description -->
-				
-				<!-- project 2 -->
-				<section class="project">
-					<h3 class="title">Title of the project</h3>
-					<div class="meta">
-						<span class="field">Project Field</span> <span class="date">Aug 2010 - Nov2010</span>
-					</div>
-					<p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-				</section> <!-- end project description -->
+
+  <main class="cv">
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header>
+      <h1>Your Name</h1>
+
+      <p class="subtitle">
+        Your Title / Field
+      </p>
+
+      <div class="contact">
+        City, State ·
+        <a href="mailto:you@example.com">you@example.com</a> ·
+        (555) 555-5555 ·
+        <a href="https://linkedin.com/in/yourname">LinkedIn</a>
+      </div>
+    </header>
 
 
-				<!-- project 3 -->
-				<section class="project">
-					<h3 class="title">Title of the project</h3>
-					<div class="meta">
-						<span class="field">Project Field</span> <span class="date">Aug 2010 - Nov2010</span>
-					</div>
-					<p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-				</section> <!-- end project description -->				
-				
-				</div> <!-- end description -->
-		</section>	
-	
+    <!-- ==================== EDUCATION ==================== -->
 
-		<!-- Training/ seminars -->
-		
-		
-		
-		<!-- Scholistics Achievements -->
-		
-		
-		
-		<!-- Technical Skills -->
-		
-		
-		<!-- Extra-Curricular Activities -->
-		
-		
-		<!-- Personal Informations -->
-		
-		
-		<!-- References -->
-		
-		
-		
-		<!-- Declarations -->
+    <section>
+      <h2>Education</h2>
 
-	
-		<!-- signatory -->
-	
-	
-	
-	
-	</div> <!-- end main content -->
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	</div> <!-- end container -->
-	
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">University Name</div>
+          <div class="entry-date">2022–2026</div>
+        </div>
+
+        <div class="entry-subtitle">
+          B.A. in Your Major
+        </div>
+
+        <p>
+          Honors, relevant coursework, thesis, GPA, or other
+          information can go here.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ==================== EXPERIENCE ==================== -->
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Position Title</div>
+          <div class="entry-date">2025–Present</div>
+        </div>
+
+        <div class="entry-subtitle">
+          Organization Name · City, State
+        </div>
+
+        <ul>
+          <li>Describe a responsibility or accomplishment.</li>
+          <li>Include specific results or impact where possible.</li>
+          <li>Keep descriptions concise and action-oriented.</li>
+        </ul>
+      </div>
+
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Previous Position</div>
+          <div class="entry-date">2024–2025</div>
+        </div>
+
+        <div class="entry-subtitle">
+          Organization Name · City, State
+        </div>
+
+        <ul>
+          <li>Describe what you worked on.</li>
+          <li>Highlight relevant accomplishments.</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ==================== RESEARCH / PROJECTS ==================== -->
+
+    <section>
+      <h2>Research & Projects</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Project or Research Title</div>
+          <div class="entry-date">2025–2026</div>
+        </div>
+
+        <div class="entry-subtitle">
+          Institution or Organization
+        </div>
+
+        <p>
+          Briefly describe the project, your role, methodology,
+          and any significant findings or outcomes.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ==================== AWARDS ==================== -->
+
+    <section>
+      <h2>Awards & Honors</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Award or Honor</div>
+          <div class="entry-date">2026</div>
+        </div>
+
+        <div class="entry-subtitle">
+          Awarding Institution
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Another Award</div>
+          <div class="entry-date">2025</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SKILLS ==================== -->
+
+    <section>
+      <h2>Skills</h2>
+
+      <div class="skills">
+        <span class="skill">Research</span>
+        <span class="skill">Writing</span>
+        <span class="skill">HTML / CSS</span>
+        <span class="skill">Python</span>
+        <span class="skill">Spanish</span>
+      </div>
+    </section>
+
+  </main>
+
 </body>
 </html>
